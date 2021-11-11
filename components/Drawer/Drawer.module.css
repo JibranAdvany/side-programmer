@@ -1,0 +1,31 @@
+.moveIn {
+  animation: comeIn 0.5s;
+}
+
+.moveOut {
+  animation: goOut 0.5s;
+}
+
+@keyframes comeIn {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes goOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+}

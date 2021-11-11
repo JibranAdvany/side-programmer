@@ -1,17 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Drawer from "./../../Drawer/Drawer";
 
 const Header = () => {
+  const [showDrawer, setShowDrawer] = useState(false);
+
+  const closeDrawer = () => {
+    setShowDrawer(false);
+  };
+
   return (
     <header className="bg-indigo-700 sticky top-0 z-10 px-6">
-      <nav className="py-4 mx-auto flex justify-between items-center md:flex-row flex-col text-white max-w-7xl">
+      <nav className="py-4 mx-auto flex justify-between items-center text-white max-w-7xl">
         <h1 className="font-bold text-3xl">Side Programmer</h1>
 
-        <FontAwesomeIcon icon={faBars} className="hidden" />
+        <div
+          className="md:hiddenp-4 cursor-pointer p-4"
+          onClick={() => setShowDrawer(true)}
+        >
+          <FontAwesomeIcon icon={faBars} className="text-lg md:hidden" />
+        </div>
 
-        <div className="sm:flex justify-between items-center">
+        {showDrawer && <Drawer closeDrawer={closeDrawer} />}
+
+        <div className="hidden md:flex justify-between items-center">
           <Link href="/">
             <a className="ml-3 md:ml-6 p-3">Home</a>
           </Link>
