@@ -15,7 +15,7 @@ import {
 
 const TopicsWall = () => {
   return (
-    <section className="mt-20">
+    <section className="mt-20 hidden lg:block">
       <h2 className="font-light text-5xl">Topics</h2>
       <div className="grid grid-cols-11 grid-rows-3 gap-4 text-center rounded-lg mt-8">
         <div className="row-span-full col-start-1 col-end-5 bg-blue-400 rounded-lg flex justify-center items-center shadow-md">

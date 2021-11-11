@@ -5,11 +5,11 @@ import Image from "next/image";
 const About = () => {
   return (
     <Layout>
-      <main className="max-w-5xl mx-auto min-h-screen mt-16">
-        <h2 className="text-5xl font-light border-b-2 border-gray-400 pb-4 px-2">
+      <main className="max-w-5xl mx-auto min-h-screen mt-8 md:mt-16 px-4">
+        <h2 className="text-3xl md:text-5xl font-light border-b-2 border-gray-400 md:pb-4 px-2">
           About
         </h2>
-        <section className="my-16 max-w-screen-sm mx-auto">
+        <section className="my-8 md:my-16 max-w-screen-sm mx-auto">
           <div>
             <h3 className="text-3xl mb-4">Jibran Advani</h3>
           </div>

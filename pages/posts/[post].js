@@ -72,9 +72,9 @@ const Post = (props) => {
 
   return (
     <Layout>
-      <main className="max-w-5xl mx-auto min-h-screen mt-16 px-4">
-        <section className="my-16 max-w-screen-sm mx-auto">
-          <h1 className="text-5xl font-light mb-8">
+      <main className="max-w-5xl mx-auto min-h-screen mt-8 md:mt-16 px-4">
+        <section className="my-4 md:my-16 max-w-screen-sm mx-auto">
+          <h1 className="text-3xl md:text-5xl font-light mb-4 md:mb-8">
             {props.post.items[0].fields.title}
           </h1>
           <ReactMarkdown className="mb-4 leading-6">

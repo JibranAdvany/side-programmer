@@ -45,15 +45,15 @@ const data = [
 
 const LatestPosts = (props) => {
   return (
-    <section className="mt-20 mb-20">
-      <h2 className="font-light text-5xl">Latest posts</h2>
-      <div className="flex justify-around flex-wrap mx-auto mt-8">
+    <section className="mt-10 md:mt-20 mb-20 px-2">
+      <h2 className="font-light text-3xl md:text-5xl">Latest posts</h2>
+      <div className="flex justify-around flex-wrap mx-auto mt-4 md:mt-8">
         {/* Card */}
 
         {props.data.map((post) => (
           <div
             key={post.fields.slug}
-            className="w-[300px] overflow-hidden mr-6 mt-12 rounded-lg flex flex-col justify-between bg-gray-100 shadow-md"
+            className="w-[300px] overflow-hidden mr-3 md:mr-6 mt-6 md:mt-12 rounded-lg flex flex-col justify-between bg-gray-100 shadow-md"
           >
             <Card
               title={post.fields.title}

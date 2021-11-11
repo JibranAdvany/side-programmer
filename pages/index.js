@@ -10,7 +10,7 @@ export default function Home(props) {
   return (
     <>
       <Layout>
-        <main className="max-w-5xl mx-auto">
+        <main className="max-w-5xl mx-auto relative">
           <FeaturedGrid />
           <FeaturedPosts data={props.featuredPosts.items} />
           <TopicsWall />

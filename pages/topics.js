@@ -6,21 +6,21 @@ const topics = [
   "HTML",
   "CSS",
   "Javascript",
-  "Front-end",
-  "Back-end",
-  "Python",
-  "Django",
-  "Flask",
-  "React",
-  "Next",
-  "Freelancing",
+  // "Front-end",
+  // "Back-end",
+  // "Python",
+  // "Django",
+  // "Flask",
+  // "React",
+  // "Next",
+  // "Freelancing",
 ];
 
 const Topics = () => {
   return (
     <Layout>
-      <main className="max-w-5xl mx-auto min-h-screen mt-16">
-        <h2 className="text-5xl font-light border-b-2 border-gray-400 pb-4 px-2">
+      <main className="max-w-5xl mx-auto min-h-screen mt-8 md:mt-16 px-4">
+        <h2 className="text-3xl md:text-5xl font-light border-b-2 border-gray-400 pb-4 px-2">
           Topics
         </h2>
         <section className="my-16 max-w-screen-sm mx-auto">
