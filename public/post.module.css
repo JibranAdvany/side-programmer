@@ -1,0 +1,29 @@
+.content h2 {
+  font-size: 2rem;
+}
+
+.content h3 {
+  font-size: 1.5rem;
+}
+
+.content h4 {
+  font-size: 1.25rem;
+}
+
+.content p {
+  margin: 1rem 0;
+}
+
+.content a {
+  color: rgba(67, 56, 202);
+  text-decoration: underline;
+}
+
+.content ul {
+  list-style: disc;
+  margin-left: 1rem;
+}
+
+.content ul li {
+  padding-left: 0.5rem;
+}
