@@ -5,10 +5,14 @@ import FeaturedGrid from "../components/sections/FeaturedGrid/FeaturedGrid";
 import FeaturedPosts from "../components/sections/FeaturedPosts/FeaturedPosts";
 import TopicsWall from "../components/sections/TopicsWall/TopicsWall";
 import LatestPosts from "../components/sections/LatestPosts/LatestPosts";
+import Head from "next/head";
 
 export default function Home(props) {
   return (
     <>
+      <Head>
+        <title>Side Programmer</title>
+      </Head>
       <Layout>
         <main className="max-w-5xl mx-auto">
           <FeaturedGrid />

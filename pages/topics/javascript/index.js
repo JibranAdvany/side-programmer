@@ -1,19 +1,19 @@
 import { createClient } from "contentful";
 import React from "react";
-import Layout from "../components/UI/Layout";
-import Card from "../components/sections/Card/Card";
+import Layout from "./../../../components/UI/Layout";
+import Card from "./../../../components/sections/Card/Card";
 import Head from "next/head";
 
-const Posts = (props) => {
+const Html = (props) => {
   return (
     <>
       <Head>
-        <title>Side Programmer | Posts</title>
+        <title>Side Programmer | Javascript</title>
       </Head>
       <Layout>
         <main className="max-w-5xl mx-auto min-h-screen mt-8 md:mt-16 px-4">
           <h2 className="text-3xl md:text-5xl font-light border-b-2 border-gray-400 pb-4 px-2">
-            Posts
+            HTML posts
           </h2>
           <section className="my-16">
             <div className="flex justify-around flex-wrap mx-auto mt-8">
@@ -39,7 +39,7 @@ const Posts = (props) => {
   );
 };
 
-export default Posts;
+export default Html;
 
 export async function getStaticProps() {
   // Connection
@@ -51,6 +51,7 @@ export async function getStaticProps() {
   // Data
   const posts = await client.getEntries({
     content_type: "articles",
+    "fields.topic": "JavaScript",
   });
 
   return {

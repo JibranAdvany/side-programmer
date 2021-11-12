@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Drawer from "./../../Drawer/Drawer";
+import Image from "next/image";
 
 const Header = () => {
   const [showDrawer, setShowDrawer] = useState(false);
@@ -14,7 +15,17 @@ const Header = () => {
   return (
     <header className="bg-indigo-700 sticky top-0 z-10 px-6">
       <nav className="py-4 mx-auto flex justify-between items-center text-white max-w-7xl">
-        <h1 className="font-bold text-3xl">Side Programmer</h1>
+        <Link href="/">
+          <a>
+            <Image
+              src="/logo-white.png"
+              alt="Side Programmer Logo"
+              width={150}
+              height={50}
+            />
+          </a>
+        </Link>
+        {/* <h1 className="font-bold text-3xl">Side Programmer</h1> */}
 
         <div
           className="md:hiddenp-4 cursor-pointer p-4"

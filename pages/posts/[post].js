@@ -6,6 +6,7 @@ import React from "react";
 import Layout from "../../components/UI/Layout";
 import Image from "next/image";
 import styles from "./../../public/post.module.css";
+import Head from "next/head";
 
 const Post = (props) => {
   const published = new Date(
@@ -71,45 +72,62 @@ const Post = (props) => {
   };
 
   return (
-    <Layout>
-      <main className="max-w-5xl mx-auto min-h-screen mt-8 md:mt-16 px-4">
-        <section className="my-4 md:my-16 max-w-screen-sm mx-auto">
-          <h1 className="text-3xl md:text-5xl font-light mb-4 md:mb-8">
-            {props.post.items[0].fields.title}
-          </h1>
-          <ReactMarkdown className="mb-4 leading-6">
-            {props.post.items[0].fields.teaser}
-          </ReactMarkdown>
-          <Image
-            src={`https:${props.post.items[0].fields.image.fields.file.url}`}
-            alt="blog"
-            width={700}
-            height={350}
-            objectFit="cover"
-          />
-          <div className="my-2">
-            <small className="italic">by Jibran Advani</small>
-            <div className="flex justify-between items-center mt-2">
-              <small className="italic block">
-                <span className="font-semibold">Published on:</span>
-                <br />
-                {published}
-              </small>
-              <small className="italic block">
-                <span className="font-semibold">Last updated:</span>
-                <br />
-                {updated}
-              </small>
-            </div>
-          </div>
-          <div className={styles.content}>
-            <ReactMarkdown components={customRenderers}>
-              {props.post.items[0].fields.content}
+    <>
+      <Head>
+        <title>{props.post.items[0].fields.title}</title>
+
+        <meta name="description" content={props.post.items[0].fields.excerpt} />
+
+        <meta
+          property="og:description"
+          content={props.post.items[0].fields.excerpt}
+        />
+
+        <meta
+          name="twitter:description"
+          content={props.post.items[0].fields.excerpt}
+        />
+      </Head>
+      <Layout>
+        <main className="max-w-5xl mx-auto min-h-screen mt-8 md:mt-16 px-4">
+          <section className="my-4 md:my-16 max-w-screen-sm mx-auto">
+            <h1 className="text-3xl md:text-5xl font-light mb-4 md:mb-8">
+              {props.post.items[0].fields.title}
+            </h1>
+            <ReactMarkdown className="mb-4 leading-6">
+              {props.post.items[0].fields.teaser}
             </ReactMarkdown>
-          </div>
-        </section>
-      </main>
-    </Layout>
+            <Image
+              src={`https:${props.post.items[0].fields.image.fields.file.url}`}
+              alt="blog"
+              width={700}
+              height={350}
+              objectFit="cover"
+            />
+            <div className="my-2">
+              <small className="italic">by Jibran Advani</small>
+              <div className="flex justify-between items-center mt-2">
+                <small className="italic block">
+                  <span className="font-semibold">Published on:</span>
+                  <br />
+                  {published}
+                </small>
+                <small className="italic block">
+                  <span className="font-semibold">Last updated:</span>
+                  <br />
+                  {updated}
+                </small>
+              </div>
+            </div>
+            <div className={styles.content}>
+              <ReactMarkdown components={customRenderers}>
+                {props.post.items[0].fields.content}
+              </ReactMarkdown>
+            </div>
+          </section>
+        </main>
+      </Layout>
+    </>
   );
 };
 

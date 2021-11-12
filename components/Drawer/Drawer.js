@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./Drawer.module.css";
+import Image from "next/image";
 
 const Drawer = (props) => {
   const closeDrawer = () => {
@@ -15,7 +16,17 @@ const Drawer = (props) => {
       <nav
         className={`w-9/12 bg-white h-full px-4 top-0 z-30 pt-8 ${styles.moveIn}`}
       >
-        <h1 className="font-bold text-xl text-black">Side Programmer</h1>
+        <Link href="/">
+          <a>
+            <Image
+              src="/logo-full.png"
+              alt="Side Programmer Logo"
+              width={150}
+              height={50}
+            />
+          </a>
+        </Link>
+        {/* <h1 className="font-bold text-xl text-black">Side Programmer</h1> */}
 
         <div className="flex flex-col text-black">
           <Link href="/">

@@ -14,7 +14,7 @@ const Card = (props) => {
           objectFit="cover"
         />
         {/* <Link href={`/topics/${props.topic.toLowerCase()}`}> */}
-        <Link href={`/topics`}>
+        <Link href={`/topics/${props.topic.toLowerCase()}`}>
           <a>
             <div className="absolute bottom-0 mb-2 ml-2 py-1 px-4 rounded-full bg-indigo-700 text-white font-bold">
               <small className="block">{props.topic}</small>
@@ -32,8 +32,15 @@ const Card = (props) => {
       </Link>
 
       {/* Author */}
-      <div className="mt-8 px-2 pb-2">
-        <small className="italic">Jibran Advani</small>
+      <div className="mt-8 px-2 pb-2 flex items-center">
+        <Image
+          src="/profileImage.jpg"
+          alt="Jibran Advani"
+          width={30}
+          height={30}
+          className="rounded-full object-cover"
+        />
+        <small className="italic ml-2">Jibran Advani</small>
       </div>
     </>
   );
