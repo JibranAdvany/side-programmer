@@ -25,6 +25,7 @@ const About = () => {
               />
               <h3 className="text-3xl ml-2">Jibran Advani</h3>
             </div>
+            <p className="text-sm pb-4">Founder | Maintainer</p>
             <p className="mb-4 leading-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis
